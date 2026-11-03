@@ -552,7 +552,7 @@
             <ul>
               <li>Architected the AI Survey service: survey, follow-up, interview and study-summary generation, with Tambo UI surfaces attached to AI responses.</li>
               <li>Shipped an SSE report-streaming endpoint (plan / delta / reset / complete / error / done events) that replaced per-section polling.</li>
-              <li>Fixed a production outage: blocking calls in handlers serialized ~18 concurrent requests per worker and triggered gunicorn SIGKILLs at 120s. Moving to sync <code>def</code> handlers restored concurrency and ended the timeouts.</li>
+              <li>Fixed a production outage: blocking calls in handlers serialized ~18 concurrent requests per worker and triggered gunicorn SIGKILLs at 120s. Moving to sync def handlers restored concurrency and ended the timeouts.</li>
               <li>Built S3 presigned-URL attachment upload and removal flow.</li>
               <li>Ran Celery workflows for more reliable background jobs and more responsive APIs.</li>
               <li>Owned integrations with Microsoft Teams, Figma, ElevenLabs and 100ms.</li>
